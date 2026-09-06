@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════
+   SIAVN - Estilos Globales Premium
+   Negro + Dorado/Bronce + Blanco
+   ═══════════════════════════════════════════════ */
+
+@theme {
+  --color-gold: #C5A55A;
+  --color-gold-light: #D4B96E;
+  --color-gold-dark: #A68B3C;
+  --color-gold-hover: #B8983F;
+  --color-charcoal: #1A1A1A;
+  --color-charcoal-light: #2A2A2A;
+  --color-charcoal-dark: #111111;
+  --color-champagne: #F5F0E8;
+  --color-champagne-light: #FAF7F2;
+  --color-beige: #E8E0D0;
+}
+
+/* ═══ SCROLL SUAVE ═══ */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ═══ SCROLLBAR ELEGANTE ═══ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-charcoal);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-light);
+}
+
+/* ═══ SELECCIÓN DE TEXTO ═══ */
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-charcoal-dark);
+}
+
+/* ═══ ANIMACIONES ═══ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes pulse-gold {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(197, 165, 90, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(197, 165, 90, 0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+.animate-pulse-gold {
+  animation: pulse-gold 2s infinite;
+}
+
+/* ═══ UTILIDADES ═══ */
+.gold-gradient {
+  background: linear-gradient(135deg, var(--color-gold-dark), var(--color-gold), var(--color-gold-light));
+}
+
+.gold-text-gradient {
+  background: linear-gradient(135deg, var(--color-gold-dark), var(--color-gold-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold-border {
+  border: 1px solid rgba(197, 165, 90, 0.3);
+}
+
+.gold-border-hover:hover {
+  border-color: var(--color-gold);
+}
+
+/* ═══ ANIMACIÓN DELAY HELPERS ═══ */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
