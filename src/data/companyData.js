@@ -21,8 +21,8 @@ const companyData = {
   phone2: '', // [PENDIENTE] - Agregar segundo teléfono cuando esté disponible
 
   // ─── CORREOS CORPORATIVOS ───
-  email1: '', // [PENDIENTE] - Agregar correo corporativo 1
-  email2: '', // [PENDIENTE] - Agregar correo corporativo 2
+  email1: 'siavncertificaciones@gmail.com', // [PENDIENTE] - Agregar correo corporativo 1
+  email2: 'contabilidad.servimedin.siavn@gmail.com', // [PENDIENTE] - Agregar correo corporativo 2
 
   // ─── REDES SOCIALES ───
   facebook: '', // [PENDIENTE] - Agregar URL de Facebook
