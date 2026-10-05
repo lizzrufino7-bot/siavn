@@ -1,18 +1,29 @@
 import {
-  Briefcase,
+  Car,
+  GraduationCap,
   Settings,
   Shield,
-  BarChart3,
+  Truck,
+  Users,
+  Search,
+  Ruler,
+  Flame,
   ArrowRight,
 } from 'lucide-react';
+
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import companyData from '../data/companyData';
 
 const iconMap = {
-  Briefcase,
+  Car,
+  GraduationCap,
   Settings,
   Shield,
-  BarChart3,
+  Truck,
+  Users,
+  Search,
+  Ruler,
+  Flame,
 };
 
 export default function Services() {
@@ -34,33 +45,49 @@ export default function Services() {
           }}
         />
       </div>
+
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
+
       <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+
         {/* Título */}
         <div className="text-center mb-16">
+
           <p className="text-gold font-semibold tracking-widest uppercase text-sm mb-3">
             Lo que ofrecemos
           </p>
+
           <h2 className="font-['Playfair_Display',serif] text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             Nuestros Servicios
           </h2>
+
           <div className="flex items-center justify-center gap-3 mb-8">
             <div className="h-px w-12 bg-gold" />
             <div className="w-2 h-2 bg-gold rotate-45" />
             <div className="h-px w-12 bg-gold" />
           </div>
-          <p className="text-white/50 text-lg max-w-2xl mx-auto">
-            Conoce los servicios que ponemos a tu disposición para
-            satisfacer tus necesidades.
+
+          <p className="text-white/60 text-lg max-w-3xl mx-auto leading-relaxed">
+            En SIAVN brindamos servicios profesionales orientados a la
+            seguridad, capacitación, inspección y certificación de equipos.
+            Trabajamos con responsabilidad, calidad y compromiso para ofrecer
+            soluciones confiables y adaptadas a las necesidades de nuestros clientes.
           </p>
+
         </div>
 
         {/* Tarjetas de Servicios */}
-        <div ref={ref} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div
+          ref={ref}
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+
           {companyData.services.map((service, index) => {
-            const Icon = iconMap[service.icon] || Briefcase;
+
+            const Icon = iconMap[service.icon] || Settings;
+
             return (
               <div
                 key={service.id}
@@ -70,9 +97,12 @@ export default function Services() {
                     : 'opacity-0 translate-y-8'
                 }`}
                 style={{
-                  transitionDelay: isVisible ? `${index * 150}ms` : '0ms',
+                  transitionDelay: isVisible
+                    ? `${index * 100}ms`
+                    : '0ms',
                 }}
               >
+
                 {/* Borde superior dorado */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gold group-hover:w-full transition-all duration-500" />
 
@@ -90,22 +120,30 @@ export default function Services() {
                 <h3 className="text-white font-bold text-xl mb-3">
                   {service.name}
                 </h3>
-                <p className="text-white/40 text-sm leading-relaxed mb-6">
+
+                <p className="text-white/50 text-sm leading-relaxed mb-6">
                   {service.description}
                 </p>
 
                 {/* Botón */}
-                <button className="group/btn flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider hover:gap-3 transition-all duration-300">
+                <a
+                  href="#contacto"
+                  className="group/btn inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider hover:gap-3 transition-all duration-300"
+                >
                   Más información
+
                   <ArrowRight
                     size={16}
                     className="group-hover/btn:translate-x-1 transition-transform"
                   />
-                </button>
+                </a>
+
               </div>
             );
           })}
+
         </div>
+
       </div>
     </section>
   );
