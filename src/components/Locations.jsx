@@ -220,8 +220,7 @@ export default function Locations() {
 
                       Google Maps
 
-                      <span className="text-xs normal-case tracking-normal font-normal">
-                        (Enlace pendiente)
+                      <span className="text-xs normal-case tracking-normal font-normal"
                       </span>
 
                     </button>
@@ -325,10 +324,6 @@ export default function Locations() {
 
       </div>
 
-    </section>
-  );
-}
-```
     </section>
   );
 }
